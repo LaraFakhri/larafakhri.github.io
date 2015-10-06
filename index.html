@@ -1,8 +1,20 @@
 <!DOCTYPE html>
 <html>
+<head>
+	<link rel="stylesheet" href="http://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <script src="http://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+</head>
 <body>
 <h1>Hello World</h1>
 <p>I'm hosted with Github Pages.</p>
-<a href="index5.html"> go to page index5.html</a>
+<div class="ct-chart"></div>
+<script>
+new Chartist.Bar('.ct-chart', {
+  labels: ['Egypt', 'Djibouti', 'Eritria', 'Guinea', 'Mali', 'Sierra Lione', 'Somalia', 'Sudan'],
+  series: [91, 93, 89, 96, 89, 88, 98, 88]
+}, {
+  distributeSeries: true
+});
+</script>
 </body>
 </html>
